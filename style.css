@@ -1,0 +1,414 @@
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --cinza: #5D5D5D;
+    --color-hoover-menu: #a8a4a4;
+    --white-home: #dbd7d7;
+}
+
+/* CONFIG GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: var(--white);
+}
+
+button {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+svg {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--white);
+}
+
+a:hover {
+    color: var(--color-hoover-menu);
+}
+
+#section-serviços .bi-arrow-right-circle{
+    color: var(--white) !important;
+}
+
+/* MENU */
+
+#active-menu {
+    display: none;
+}
+
+#logo-responsive, #menu-mobile {
+    display: none;
+    position: relative;
+    width: 90px;
+}
+
+nav {
+    width: 100%;
+}
+
+#menu-div {
+    background-color: var(--black);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+#ul-menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 100px;
+}
+
+#ul-menu li {
+    cursor: pointer;
+    color: var(--white);
+}
+
+#ul-menu li:hover {
+    color: var(--color-hoover-menu);
+}
+
+
+/* SECTION: HOME */
+
+#one-section {
+    color: var(--white);
+}
+
+#one-section h1 {
+    font-weight:900;
+}
+
+#one-section p {
+    font-weight: 100;
+}
+
+#one-section button {
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#one-section a:visited {
+    color: inherit
+}
+
+#one-section a:hover{
+    color: var(--color-hoover-menu);
+}
+
+#img-section-one {
+    z-index: -1;
+    position: absolute;
+}
+
+#div-container {
+    position: relative; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    overflow: hidden;
+}
+
+#div-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./img/barber-shop-tools-arrangement.jpg') no-repeat center center/cover;
+    filter: blur(5px); 
+    z-index: 0; 
+    opacity: 1; 
+    pointer-events: none; /
+}
+
+#div-container > * {
+    position: relative; 
+    z-index: 1;
+    color: var(--white-home); 
+}
+
+#div-container-one {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    filter:blur(0px);
+}
+
+.div-container-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1;
+}
+
+.div-container-two p,.div-container-two h1{
+    background-color: #181818;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 10px 10px 10px #222222;
+}
+
+#img-logo {
+    border-radius: 500px;
+}
+
+/* SECTION: SOBRE */
+
+#section-sobre {
+    background-color: var(--black);
+    height: 70vh;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px
+}
+
+#section-sobre p {
+    position: relative;
+    text-align: center;
+    padding: 0 30px;
+    font-weight: 100;
+}
+
+#section-sobre h1 {
+    padding-top: 50px;
+    font-weight: 900;
+}
+
+/* SECTION: SERVIÇO */
+
+#services {
+    position: relative; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    overflow: hidden;
+}
+
+#services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./img/barbearia.jpg') no-repeat center center/cover;
+    filter: blur(2px); 
+    z-index: 0; 
+    opacity: 1; 
+    pointer-events: none; 
+}
+
+#barba, #cabelo, #cabelo-e-barba, #veja {
+    z-index: 1;
+    width: 100px;
+    background-color: var(--black);
+    height: 50vh;
+    width: 40vh;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    box-shadow: 5px 5px 10px var(--black);
+}
+
+#services h1 {
+    color: var(--white);
+    z-index: 1;
+}
+
+.icon {
+    background-color: var(--white);
+    width: 100px;
+    border-radius: 100px;
+    padding: 20px;
+}
+
+/* SECTION: CONTATO */
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px
+}
+
+input {
+    height: 30px;
+    width: 500px;
+    border: var(--black) solid 3px;
+    padding: 0 0 0 5px;
+}
+
+textarea {
+    border: var(--black) solid 3px;
+    padding: 0 0 0 5px;
+}
+
+#form button {
+    background-color: var(--black);
+    color: var(--white);
+    width: 200px;
+    padding: 10px;
+}
+
+#form-contact {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width:900px){
+
+    #active-menu {
+        cursor: pointer;
+        padding-right: 10px;
+    }
+   
+    #logo-responsive {
+        display: block;
+        position: relative;
+        width: 75px;
+    }
+
+    #active-menu {
+        display: block;
+        color: var(--white);
+    }
+
+    #close {
+        color: white; 
+        cursor: pointer; 
+        padding: 10px; 
+        display: inline;
+    }
+
+    #menu-mobile {
+        display: none;
+        background-color: var(--black);
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        width: 50vh;
+    }
+
+    #menu-mobile nav ul li {
+        height: 10vh;
+        padding: 20px;
+    }
+
+    #menu-mobile nav ul {
+        text-align: right;
+        list-style-type: none;
+    }
+
+    #menu-mobile nav ul li a {
+        color: var(--white);
+        font-size: 20px;
+        font-weight: 300;
+        padding: 20px 4%;
+    }
+
+    #menu-mobile nav ul li a:hover {
+        color: var(--color-hoover-menu);
+    }
+
+    #ul-menu {
+        display: none;
+    }
+
+    #img-logo {
+        display: none;
+    }
+
+    #div-container-one {
+        height: 35vh;
+    }
+
+    #div-container-two{
+        text-align: center;
+    }
+
+    #div-container-two h1 {
+        padding-left: 5px;
+    }
+
+    #section-sobre p {
+        text-align: center;
+        padding: 15px;
+        font-size: 15px;
+        font-weight: 100;
+    }
+
+    #section-sobre {
+        background-color: var(--black);
+        height: 70vh;
+        color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px
+    }
+
+    #services {
+        flex-wrap: wrap;
+    }
+
+    #barba, #cabelo, #cabelo-e-barba, #veja {
+        width: 150px;
+        height: 230px;
+    }
+
+    input {
+        width: 320px;
+    }
+
+    textarea {
+        width: 320px;
+    }
+}
