@@ -144,7 +144,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('./img/barber-shop-tools-arrangement.jpg') no-repeat center center/cover;
+    background: url('/src/assets/img/barber-shop-tools-arrangement.jpg') no-repeat center center/cover;
     filter: blur(5px); 
     z-index: 0; 
     opacity: 1; 
@@ -227,7 +227,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('./img/barbearia.jpg') no-repeat center center/cover;
+    background: url('/src/assets/img/barbearia.jpg') no-repeat center center/cover;
     filter: blur(2px); 
     z-index: 0; 
     opacity: 1; 
